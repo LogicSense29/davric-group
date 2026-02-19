@@ -15,11 +15,11 @@ const navLinks = [
     dropdown: [
       { name: "Davic Oil & Gas", href: "/oil-gas" },
       { name: "Davic Construction", href: "/construction" },
-      { name: "Davic Homes", href: "/homes" },
+      // { name: "Davic Homes", href: "/homes" },
       { name: "Davic Telecom", href: "/telecom" },
     ],
   },
-  { name: "Ojerinkporo Foundation", href: "/ojerinkporo" },
+  { name: "Ojerinkporo Foundation", href: "https://ojerinkporofoundation.com" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -47,7 +47,7 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         isScrolled 
-          ? "bg-white/95 backdrop-blur-md py-4 shadow-sm border-b border-davic-gray-medium" 
+          ? "bg-white/95 backdrop-blur-md py-2 md:py-0 shadow-sm" 
           : "bg-transparent py-10 lg:py-5"
       }`}
     >

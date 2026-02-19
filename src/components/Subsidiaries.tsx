@@ -36,16 +36,16 @@ const subsidiaries = [
     index: "03",
     image: "/davricgroup-construction.png"
   },
-  {
-    id: "homes",
-    title: "Dav-Ric Homes",
-    category: "Real Estate Development",
-    description: "PROVIDING SERVICES ACROSS ALL AREAS OF RESIDENTIAL, COMMERCIAL & MIXED USE DEVELOPMENT.",
-    icon: <Home className="w-6 h-6" />, 
-    href: "/homes",
-    index: "04",
-    image: "/davricgroup-homes.png"
-  },
+  // {
+  //   id: "homes",
+  //   title: "Dav-Ric Homes",
+  //   category: "Real Estate Development",
+  //   description: "PROVIDING SERVICES ACROSS ALL AREAS OF RESIDENTIAL, COMMERCIAL & MIXED USE DEVELOPMENT.",
+  //   icon: <Home className="w-6 h-6" />, 
+  //   href: "/homes",
+  //   index: "04",
+  //   image: "/davricgroup-homes.png"
+  // },
 ];
 
 export default function Subsidiaries() {
@@ -95,7 +95,7 @@ export default function Subsidiaries() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                className="group relative h-[700px] border-x border-davic-gray-medium overflow-hidden flex flex-col justify-end p-12 lg:p-16 transition-all duration-700"
+                className="group relative h-[380px] lg:h-[500px] border-x border-davic-gray-medium overflow-hidden flex flex-col justify-end p-8 lg:p-16 transition-all duration-700"
               >
                 {/* Background Reveal on Hover */}
                 <div className="absolute inset-0 z-0 bg-davic-accent transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[0.77, 0, 0.175, 1]" />
