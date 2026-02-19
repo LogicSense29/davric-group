@@ -99,7 +99,7 @@ export default function CinematicGallery() {
 
           {/* Header */}
           <div className="flex flex-col md:flex-row justify-between items-end mb-20">
-            <div className="space-y-6">
+            <div className="space-y-6 self-start ">
               <div className="flex items-center gap-4 text-davic-primary">
                 <div className="w-12 h-[2px] bg-davic-primary" />
                 <span className="text-[10px] uppercase font-black tracking-[0.5em]">Visual Identity</span>
