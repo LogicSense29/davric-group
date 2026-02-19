@@ -8,30 +8,25 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
   {
     name: "Subsidiaries",
-    href: "#subsidiaries",
+    href: "/#subsidiaries",
     dropdown: [
-      { name: "Davic Foundation", href: "/foundation" },
       { name: "Davic Oil & Gas", href: "/oil-gas" },
       { name: "Davic Construction", href: "/construction" },
       { name: "Davic Homes", href: "/homes" },
+      { name: "Davic Telecom", href: "/telecom" },
     ],
   },
-  { name: "About", href: "/about" },
-  { 
-    name: "Ojerinkporo Foundation", 
-    href: "/ojerinkporo",
-    dropdown: [
-      { name: "Schema", href: "/schema" }
-    ]
-  },
+  { name: "Ojerinkporo Foundation", href: "/ojerinkporo" },
   { name: "Contact", href: "/contact" },
 ];
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -81,10 +76,14 @@ export default function Navigation() {
             </div>
           </Link>
 
-          {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
-              <div key={link.name} className="relative group">
+              <div 
+                key={link.name} 
+                className="relative"
+                onMouseEnter={() => setHoveredLink(link.name)}
+                onMouseLeave={() => setHoveredLink(null)}
+              >
                 <Link
                   href={link.href}
                   className={`text-[10px] font-black uppercase tracking-[0.3em] transition-all duration-300 flex items-center gap-2 py-2 ${
@@ -92,16 +91,18 @@ export default function Navigation() {
                   }`}
                 >
                   {link.name}
-                  {link.dropdown && <ChevronDown className="w-3 h-3 group-hover:rotate-180 transition-transform opacity-30" />}
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-davic-primary transition-all group-hover:w-full" />
+                  {link.dropdown && <ChevronDown className={`w-3 h-3 transition-transform opacity-30 ${hoveredLink === link.name ? 'rotate-180' : ''}`} />}
+                  <span className={`absolute bottom-0 left-0 h-[2px] bg-davic-primary transition-all duration-300 ${hoveredLink === link.name ? 'w-full' : 'w-0'}`} />
                 </Link>
                 
                 <AnimatePresence>
-                  {link.dropdown && (
+                  {link.dropdown && hoveredLink === link.name && (
                     <motion.div 
-                      initial={{ opacity: 0, y: 10, pointerEvents: "none" }}
-                      whileHover={{ opacity: 1, y: 0, pointerEvents: "auto" }}
-                      className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      className="absolute top-full left-0 pt-4 z-50"
                     >
                       <div className="bg-davic-accent border border-white/10 shadow-3xl p-8 min-w-[280px]">
                         {link.dropdown.map((sub, i) => (
@@ -111,7 +112,7 @@ export default function Navigation() {
                             className="block py-4 text-[9px] font-black uppercase tracking-[0.3em] text-white/50 hover:text-white transition-colors border-b border-white/5 last:border-0 group/sub"
                           >
                             <span className="inline-block transition-transform group-hover/sub:translate-x-2">
-                               0{i + 1} — {sub.name}
+                                0{i + 1} — {sub.name}
                             </span>
                           </Link>
                         ))}
@@ -123,10 +124,9 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Toggle */}
           <button
-            className={`lg:hidden relative z-50 p-2 transition-colors ${
-              mobileMenuOpen ? "text-white" : isScrolled ? "text-davic-accent" : "text-white"
+            className={`lg:hidden relative z-[100] p-2 transition-colors ${
+              mobileMenuOpen ? "text-white" : isScrolled ? "text-davic-primary" : "text-white"
             }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >

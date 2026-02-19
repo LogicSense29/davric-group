@@ -75,8 +75,8 @@ export default function Preloader() {
             <div className="overflow-hidden h-6">
                <motion.p 
                  key={percent}
-                 initial={{ y: "100%" }}
-                 animate={{ y: 0 }}
+                 initial={{ y: "100%", opacity: 0 }}
+                 animate={{ y: 0, opacity: 1 }}
                  className="text-[10px] font-black text-davic-primary uppercase tracking-[0.5em]"
                >
                  SYSTEMS INITIALIZING — {percent}%

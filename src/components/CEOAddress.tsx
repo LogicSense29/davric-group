@@ -17,7 +17,7 @@ export default function CEOAddress() {
           >
             <div className="aspect-[3/4] relative overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 shadow-3xl">
               <Image 
-                src="/davric-ceo.png" // Provided new picture
+                src="/davric-ceo2.jpg" // Provided new picture
                 alt="Iyke Agwu - Group CEO"
                 fill
                 className="object-cover"

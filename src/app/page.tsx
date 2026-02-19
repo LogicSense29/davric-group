@@ -5,6 +5,7 @@ import Purpose from "@/components/Purpose";
 import CEOAddress from "@/components/CEOAddress";
 import History from "@/components/History";
 import Leadership from "@/components/Leadership";
+import CinematicGallery from "@/components/CinematicGallery";
 import Foundation from "@/components/Foundation";
 import Subsidiaries from "@/components/Subsidiaries";
 import ContactCTA from "@/components/ContactCTA";
@@ -12,7 +13,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen font-">
+    <main className="min-h-screen">
       <Navigation />
       <Hero />
       <StatementSlides />
@@ -20,6 +21,7 @@ export default function Home() {
       <CEOAddress />
       <History />
       <Leadership />
+      <CinematicGallery />
       <Foundation />
       <Subsidiaries />
       <ContactCTA />

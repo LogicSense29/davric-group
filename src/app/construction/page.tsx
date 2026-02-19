@@ -2,79 +2,92 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import PageHeader from "@/components/PageHeader";
+import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
-import { Building2, Layout, HardHat, ArrowRight } from "lucide-react";
+import { Building2, Layout, HardHat, ShieldCheck, Ruler, ArrowRight } from "lucide-react";
+import Image from "next/image";
+
+const EXPERTISE = [
+  { icon: <Building2 />, title: "Structural Engineering", label: "INDUSTRIAL SCALE" },
+  { icon: <Layout />, title: "Project Management", label: "TECHNICAL RIGOR" },
+  { icon: <HardHat />, title: "Civil Works", label: "URBAN INFRASTRUCTURE" },
+  { icon: <Ruler />, title: "Architectural Design", label: "AESTHETIC PRECISION" }
+];
 
 export default function ConstructionPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navigation />
-      <PageHeader 
-        title="CIVIL WORKS" 
-        subtitle="Infrastructure & Design" 
-        index="OP-03"
-      />
       
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            
-            <div className="lg:col-span-8 space-y-12">
-              <div className="space-y-6">
-                <h2 className="text-3xl font-black text-davic-accent uppercase tracking-tighter">
-                  Structural <span className="text-davic-primary">Integrity</span>
-                </h2>
-                <p className="text-lg font-bold text-davic-secondary uppercase tracking-widest leading-relaxed">
-                  Dav-Ric Construction delivers high-performance infrastructure through rigorous 
-                  technical discipline and industrial-scale operational capacity.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
-                 {[
-                   { icon: <Building2 className="w-6 h-6" />, title: "Commercial", desc: "Large scale office and facility construction solutions." },
-                   { icon: <Layout className="w-6 h-6" />, title: "Architecture", desc: "Technical drafting and industrial design protocols." },
-                   { icon: <HardHat className="w-6 h-6" />, title: "Civil Works", desc: "Roads, bridges, and critical urban infrastructure." },
-                 ].map((item, i) => (
-                   <div key={i} className="p-8 border border-davic-gray-medium bg-davic-gray-light group hover:border-davic-primary transition-all duration-500">
-                      <div className="text-davic-primary mb-6 transition-transform group-hover:scale-110">
-                        {item.icon}
-                      </div>
-                      <h4 className="text-xs font-black uppercase tracking-[0.2em] text-davic-accent mb-4">{item.title}</h4>
-                      <p className="text-[10px] font-bold text-davic-secondary uppercase tracking-widest leading-relaxed">{item.desc}</p>
-                   </div>
-                 ))}
-              </div>
-            </div>
-            
-            <div className="lg:col-span-4">
-               <div className="p-10 border border-davic-gray-medium rounded-sm space-y-10">
-                  <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-davic-primary">Site Information</h3>
-                  <div className="space-y-6">
-                     <div className="flex flex-col gap-2">
-                        <span className="text-[10px] font-bold uppercase text-davic-accent/40 tracking-widest">Global Sites</span>
-                        <p className="text-xl font-black text-davic-primary">LAC:042 / LON:018</p>
-                     </div>
-                     <div className="flex flex-col gap-2">
-                        <span className="text-[10px] font-bold uppercase text-davic-accent/40 tracking-widest">Active Crew</span>
-                        <p className="text-xl font-black text-davic-primary">2,500+ PERSONNEL</p>
-                     </div>
-                     <div className="flex flex-col gap-2">
-                        <span className="text-[10px] font-bold uppercase text-davic-accent/40 tracking-widest">Compliance</span>
-                        <p className="text-xl font-black text-davic-primary">ISO:9001 QUALIFIED</p>
-                     </div>
-                  </div>
-                  <button className="w-full py-5 bg-davic-primary text-white text-[10px] font-black uppercase tracking-[0.3em] hover:bg-davic-accent transition-all flex items-center justify-center gap-4 shadow-xl shadow-davic-primary/20">
-                    Project Request <ArrowRight className="w-4 h-4" />
-                  </button>
-               </div>
-            </div>
+      <PageHero 
+        title="BUILT LEGACY"
+        subtitle="Dav-Ric Construction is redefining the skylines of emerging economies through structural innovation, technical mastery, and industrial discipline."
+        image="/davricgroup-construction.png"
+        category="Civil Engineering"
+      />
 
+      <section className="py-32">
+        <div className="px-8 md:px-16 lg:px-24">
+          <div className="max-w-7xl mx-auto">
+             <div className="flex flex-col lg:flex-row gap-24 items-center">
+                <div className="lg:w-1/2 space-y-12">
+                   <div className="flex items-center gap-4 text-davic-primary">
+                     <div className="w-12 h-[2px] bg-davic-primary" />
+                     <span className="text-[10px] uppercase font-black tracking-[0.5em]">Core Capability</span>
+                   </div>
+                   <h2 className="text-5xl font-black text-davic-accent uppercase tracking-tighter leading-none">
+                     Structural <br />
+                     <span className="text-davic-primary">Dominance</span>
+                   </h2>
+                   <p className="text-xs md:text-sm font-bold text-davic-secondary uppercase tracking-widest leading-loose">
+                     Our construction division operates as a synchronized machine. We integrate architectural vision with heavy-duty engineering to deliver projects that are not only aesthetically superior but structurally immortal. From commercial complexes to critical infrastructure, our word is bond and our bond links the world.
+                   </p>
+                   <div className="flex items-center gap-12">
+                      <div className="text-center md:text-left">
+                         <span className="text-[8px] font-black text-davic-primary uppercase tracking-widest mb-1 block">Safety Record</span>
+                         <p className="text-2xl font-black text-davic-accent">100% LTI FREE</p>
+                      </div>
+                      <div className="text-center md:text-left">
+                         <span className="text-[8px] font-black text-davic-primary uppercase tracking-widest mb-1 block">Personnel</span>
+                         <p className="text-2xl font-black text-davic-accent">2,500+</p>
+                      </div>
+                   </div>
+                </div>
+
+                <div className="lg:w-1/2 relative">
+                   <div className="grid grid-cols-2 gap-4">
+                      <div className="aspect-[3/4] relative overflow-hidden border border-davic-gray-medium transition-all duration-700 hover:scale-[1.02]">
+                         <Image src="/davricgroup-construction2.jpeg" alt="Construction detail" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-1000" />
+                      </div>
+                      <div className="aspect-[3/4] relative overflow-hidden border border-davic-gray-medium transition-all duration-700 hover:scale-[1.02] mt-12">
+                         <Image src="/davricgroup-construction3.jpeg" alt="Construction layout" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-1000" />
+                      </div>
+                   </div>
+                   {/* Background element */}
+                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[120%] h-1/2 bg-davic-gray-light rotate-[-5deg]" />
+                </div>
+             </div>
           </div>
         </div>
       </section>
-      
+
+      {/* Expertise Section */}
+      <section className="py-32 bg-davic-accent text-white relative">
+        <div className="px-8 md:px-16 lg:px-24">
+          <div className="max-w-7xl mx-auto">
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                {EXPERTISE.map((e, i) => (
+                  <div key={i} className="space-y-6">
+                     <div className="text-davic-primary">{e.icon}</div>
+                     <h3 className="text-xs font-black uppercase tracking-[0.3em]">{e.title}</h3>
+                     <p className="text-[8px] font-black text-davic-primary uppercase tracking-[0.4em]">{e.label}</p>
+                  </div>
+                ))}
+             </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

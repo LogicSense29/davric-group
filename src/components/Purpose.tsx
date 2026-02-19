@@ -44,8 +44,9 @@ export default function Purpose() {
                   <span className="text-[10px] uppercase font-black tracking-[0.5em]">Who We Are</span>
                 </div>
                 <h2 className="text-5xl md:text-7xl font-black text-davic-accent leading-[0.85] uppercase tracking-tighter">
-                  CONSTELLATION <br />
-                  OF <span className="text-davic-primary text-glow-sm">VALUE</span>
+                  {/* CONSTELLATION <br /> */}
+                  OUR <br />
+                  <span className="text-davic-primary text-glow-sm">PURPOSE</span>
                 </h2>
                 <p className="text-[11px] font-bold text-davic-secondary uppercase tracking-widest leading-loose">
                   THE DAV-RIC GROUP OF COMPANIES IS A CONSTELLATION OF COMPANIES ESTABLISHED TO MAKE LIFE EASIER AND FOR OPERATIONS TO BE MORE EFFICIENT.
@@ -69,7 +70,7 @@ export default function Purpose() {
             </motion.div>
           </div>
 
-          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8 lg:pt-12">
+          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 lg:pt-12">
             {VALUES.map((value, index) => (
               <motion.div
                 key={value.title}
