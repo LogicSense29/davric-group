@@ -45,8 +45,15 @@ export default function PageHero({ title, subtitle, image, category }: PageHeroP
                 <span className="text-[10px] uppercase font-black tracking-[0.5em]">{category}</span>
               </div>
             )}
-            <h1 className="text-6xl md:text-8xl lg:text-[10vw] font-black text-white leading-[0.85] tracking-tighter uppercase">
-              {title}
+            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[7vw] font-black text-white leading-[0.85] tracking-tighter uppercase">
+              {
+                // title.split(" ").map((line, index) => (
+                //   <span key={index} className="block">
+                //     {line}
+                //   </span>
+                // ))
+                title
+              }
             </h1>
             <p className="max-w-2xl text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.2em] leading-loose">
               {subtitle}
