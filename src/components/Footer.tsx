@@ -6,15 +6,15 @@ const footerLinks = {
   subsidiaries: [
     { name: "Dav-Ric Oil & Gas", href: "/oil-gas" },
     { name: "Dav-Ric Construction", href: "/construction" },
-    // { name: "Dav-Ric Homes", href: "/homes" },
+    { name: "Dav-Ric Homes", href: "/homes" },
     { name: "Dav-Ric Telecom", href: "/telecom" },
     // { name: "Dav-Ric Foundation", href: "/foundation" },
     // { name: "Ojerinkporo", href: "/ojerinkporo" },
   ],
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Careers", href: "/careers" },
-    { name: "Global Presence", href: "/news" },
+    // { name: "Careers", href: "/careers" },
+    // { name: "Global Presence", href: "/news" },
     { name: "Contact", href: "/contact" },
   ],
 };

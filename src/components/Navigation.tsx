@@ -15,8 +15,8 @@ const navLinks = [
     dropdown: [
       { name: "Davic Oil & Gas", href: "/oil-gas" },
       { name: "Davic Construction", href: "/construction" },
-      // { name: "Davic Homes", href: "/homes" },
       { name: "Davic Telecom", href: "/telecom" },
+        { name: "Davic Homes", href: "/homes" },
     ],
   },
   { name: "Ojerinkporo Foundation", href: "https://ojerinkporofoundation.com" },

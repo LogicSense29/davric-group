@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Radio, Wrench, Zap } from "lucide-react";
+import { ArrowRight, Cable, MapPin, Radio, Wrench, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -73,6 +73,25 @@ const OPERATIONS = [
       "Efficient Energy Monitoring Solution",
     ],
     image: "/cell-site-powersolutions-telecom.jpeg",
+  },
+  {
+    index: "04",
+    icon: <Cable className="w-6 h-6" />,
+    title: "OFC Laying & Civil Works",
+    location: "Nigeria",
+    description:
+      "Our Optical Fibre Cable (OFC) Laying service showcases our expertise in every step of the process, from meticulous surveying and planning to precise execution across all terrain types.",
+    services: [
+      "Survey and Assessment of Trenching terrain and routes",
+      "Acquisition and liaising for Optimal Trenching routes",
+      "Adherence with Regulatory Agencies and Standards",
+      "Trenching and Ducting works for highways, arterial roads, feeder roads, and residential streets",
+      "Trenching and Ducting works for BTS connectivity",
+      "HDPE Ducts Laying",
+      "Cable Blowing and Splicing works",
+      "Construction of Manholes, Handholes and FRP Pull Boxes",
+    ],
+    image: "/ofc-laying-and-civilworks-telecom.png",
   },
 ];
 
