@@ -20,7 +20,7 @@ const OPERATIONS = [
       "In collaboration with Major Petroleum Product Importers in Nigeria who are licensed to import, our Oil & Gas business coordinates the logistics of importing AGO to its Tank Farm at Apapa. This involves arranging transportation, customs clearance, and compliance with local regulations.",
     detail:
       "The partnership ensures efficient handling of the importation process, from sourcing the product overseas to its final delivery to clients. By leveraging the expertise and resources of both parties, we streamline operations and maintain a consistent supply of AGO.",
-    image: "/davricgroup-oilandgas3.jpg",
+    image: "/davricgroup-oilandgas4.jpg",
   },
   {
     index: "02",
@@ -31,7 +31,7 @@ const OPERATIONS = [
       "The Oil & Gas subsidiary leverages its dedicated storage facilities at the Apapa Tank Farm in Lagos and our AGO Dump at New Garage in Ibadan to ensure a consistent supply of AGO to our clients' Storage and Retail Facilities.",
     detail:
       "By partnering with retail filling stations and smaller energy distribution players, we are able to expand our reach and market penetration, catering to a wide range of consumers across different locations.",
-    image: "/davricgroup-oilandgas4.jpg",
+    image: "/davricgroup-oilandgas5.jpg",
   },
   {
     index: "03",
@@ -42,7 +42,7 @@ const OPERATIONS = [
       "We utilise our Distribution Fleet of Tankers and Peddler Trucks to ensure a consistent supply of AGO from our strategic storage facilities to various client locations, including Telecoms cell sites, factories, and operational site fuel dumps.",
     detail:
       "The company employs robust logistics to ensure timely delivery in meeting the specific requirements of each client. Through efficient inventory management and scheduling, we maintain adequate stock levels and fulfill client orders promptly.",
-    image: "/davricgroup-oilandgas5.jpg",
+    image: "/davricgroup-oilandgas.png",
   },
 ];
 
